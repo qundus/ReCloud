@@ -1,0 +1,12 @@
+{
+    "java.completion.enabled": true,
+    "vsintellicode.java.completionsEnabled": true,
+    "java.completion.maxResults": 100,
+    "java.completion.filteredTypes": [
+        //"java.awt.*",
+        //"com.sun.*"
+    ],
+    "workbench.settings.editor": "json",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.completion.guessMethodArguments": false
+}
