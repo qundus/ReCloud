@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e0d21f7f-958c-4e33-875a-f2666ffba4eb" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YqRJ1v9JQYFaWPeRdRULf1B0Hg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.upm.App" />
+      <module name="UPM-Cloud-Researcher" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.upm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e0d21f7f-958c-4e33-875a-f2666ffba4eb" name="Default Changelist" comment="" />
+      <created>1583668065804</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583668065804</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1506" y="-7" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583668465800">
+      <screen x="-1920" y="-182" width="1920" height="1040" />
+    </state>
+    <state x="-1506" y="-7" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/-1920.-182.1920.1040@-1920.-182.1920.1040" timestamp="1583668465800" />
+    <state x="-1181" y="92" key="FileChooserDialogImpl" timestamp="1583676554401">
+      <screen x="-1920" y="-182" width="1920" height="1040" />
+    </state>
+    <state x="-1181" y="92" key="FileChooserDialogImpl/0.0.1366.728/-1920.-182.1920.1040@-1920.-182.1920.1040" timestamp="1583676554401" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1583676637895">
+      <screen x="-1920" y="-182" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-182.1920.1040@-1920.-182.1920.1040" timestamp="1583676637895" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1583676637895">
+      <screen x="-1920" y="-182" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-182.1920.1040@-1920.-182.1920.1040" timestamp="1583676637895" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1583676637895">
+      <screen x="-1920" y="-182" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-182.1920.1040@-1920.-182.1920.1040" timestamp="1583676637895" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1583676637895">
+      <screen x="-1920" y="-182" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-182.1920.1040@-1920.-182.1920.1040" timestamp="1583676637895" />
+    <state x="-1430" y="-7" key="Maven.ArtifactSearchDialog" timestamp="1583668630196">
+      <screen x="-1920" y="-182" width="1920" height="1040" />
+    </state>
+    <state x="-1430" y="-7" key="Maven.ArtifactSearchDialog/0.0.1366.728/-1920.-182.1920.1040@-1920.-182.1920.1040" timestamp="1583668630196" />
+    <state x="301" y="292" key="Performance.Activity.Monitor" timestamp="1583676308999">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="301" y="292" key="Performance.Activity.Monitor/0.0.1366.728/-1920.-182.1920.1040@-1920.-182.1920.1040" timestamp="1583676308999" />
+    <state x="-1459" y="-20" key="SettingsEditor" timestamp="1583676141956">
+      <screen x="-1920" y="-182" width="1920" height="1040" />
+    </state>
+    <state x="-1459" y="-20" key="SettingsEditor/0.0.1366.728/-1920.-182.1920.1040@-1920.-182.1920.1040" timestamp="1583676141956" />
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1583668099535">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-182.1920.1040@0.0.1366.728" timestamp="1583668099535" />
+    <state x="-1648" y="-46" key="new project wizard" timestamp="1583676632216">
+      <screen x="-1920" y="-182" width="1920" height="1040" />
+    </state>
+    <state x="-1648" y="-46" key="new project wizard/0.0.1366.728/-1920.-182.1920.1040@-1920.-182.1920.1040" timestamp="1583676632216" />
+  </component>
+</project>
