@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <modelVersion>4.0.0</modelVersion>
 
-<groupId>com.upm.researcher</groupId>
-<artifactId>Cloud-Researcher</artifactId>
-<version>0.8.5</version>
+<groupId>tech.cypherskar.cloudex</groupId>
+<artifactId>Cloud-Experiments</artifactId>
+<version>0.9.5</version>
 
 <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -93,9 +93,9 @@
     <testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
 
     <directory>${project.basedir}/distribution</directory>
-    <finalName>UPM_CR-${project.version}</finalName>
-    <outputDirectory>${project.basedir}/target/classes</outputDirectory>
-    <testOutputDirectory>${project.basedir}/target/test-classes</testOutputDirectory>
+    <finalName>CloudEx v${project.version}</finalName>
+    <outputDirectory>${project.basedir}/distribution/target/classes</outputDirectory>
+    <testOutputDirectory>${project.basedir}/distribution/target/test-classes</testOutputDirectory>
     <!--resources>
         <resource>
             <directory>${project.basedir}/module/src/main/resources</directory>
