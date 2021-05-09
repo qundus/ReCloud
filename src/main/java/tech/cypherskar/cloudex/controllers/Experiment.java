@@ -121,7 +121,7 @@ public final class Experiment
     //  *****************************
 
     /**Launch experiment the standard way.*/
-    public static void LaunchLegacy()
+    public static void Launch()
     {
         int initialized = 0;
 

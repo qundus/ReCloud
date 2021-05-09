@@ -26,6 +26,7 @@ tech/cypherskar/cloudex/components/cloudsim/ASimulation.class
 tech/cypherskar/cloudex/components/algorithms/pso/PSO$Position.class
 tech/cypherskar/cloudex/components/algorithms/honeybee/AHost.class
 tech/cypherskar/cloudex/templates/setups/ABrokerSetup.class
+tech/cypherskar/Example.class
 tech/cypherskar/cloudex/controllers/Brokers$1.class
 tech/cypherskar/cloudex/components/algorithms/aco/ACO.class
 tech/cypherskar/cloudex/components/window/Tables.class
@@ -54,7 +55,6 @@ tech/cypherskar/cloudex/controllers/Experiment.class
 tech/cypherskar/cloudex/controllers/Datacenters$VmScheduler.class
 tech/cypherskar/cloudex/components/algorithms/aco/AAnt.class
 tech/cypherskar/cloudex/components/algorithms/pso/Particle.class
-tech/cypherskar/App.class
 tech/cypherskar/cloudex/components/algorithms/aco/ACO_Refactored.class
 tech/cypherskar/cloudex/components/algorithms/pso/PSO.class
 tech/cypherskar/cloudex/components/algorithms/minmin/MinMin$1.class

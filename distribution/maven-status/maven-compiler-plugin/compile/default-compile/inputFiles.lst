@@ -31,6 +31,7 @@
 /home/eslam/Desktop/cloud-research/src/main/java/tech/cypherskar/cloudex/templates/setups/AVirtualMachine.java
 /home/eslam/Desktop/cloud-research/src/main/java/tech/cypherskar/cloudex/components/algorithms/bullet/Bullet.java
 /home/eslam/Desktop/cloud-research/src/main/java/tech/cypherskar/cloudex/controllers/Window.java
+/home/eslam/Desktop/cloud-research/src/main/java/tech/cypherskar/Example.java
 /home/eslam/Desktop/cloud-research/src/main/java/tech/cypherskar/cloudex/components/algorithms/pso/FitnessFunction.java
 /home/eslam/Desktop/cloud-research/src/main/java/tech/cypherskar/cloudex/components/algorithms/shortestjobfirst/ShortestJobFirst.java
 /home/eslam/Desktop/cloud-research/src/main/java/tech/cypherskar/cloudex/bridges/AVirtualMachineBridge.java
@@ -40,5 +41,4 @@
 /home/eslam/Desktop/cloud-research/src/main/java/tech/cypherskar/cloudex/components/algorithms/honeybee/LBA_HB.java
 /home/eslam/Desktop/cloud-research/src/main/java/tech/cypherskar/cloudex/components/algorithms/ipso/FitnessFunction.java
 /home/eslam/Desktop/cloud-research/src/main/java/tech/cypherskar/cloudex/templates/setups/ABrokerSetup.java
-/home/eslam/Desktop/cloud-research/src/main/java/tech/cypherskar/App.java
 /home/eslam/Desktop/cloud-research/src/main/java/tech/cypherskar/cloudex/templates/setups/ACloudlet.java
