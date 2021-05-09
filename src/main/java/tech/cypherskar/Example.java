@@ -32,6 +32,11 @@ import org.knowm.xchart.style.Styler.LegendLayout;
 import org.knowm.xchart.style.Styler.LegendPosition;
 
 
+/**
+ * Shows the steps to create and configure an experiment, try maintaining 
+ * the sequence of the steps because that's how cloudsim is usually 
+ * initialized.
+ */
 public class Example
 {
     public static void main(String[] args)
