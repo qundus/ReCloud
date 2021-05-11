@@ -4,12 +4,11 @@
 name: Deploy as Github & Maven Packages
 
 on:
-  push:
+  release:
     branches: [main]
    
-
 jobs:
-  deploy-process:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -26,22 +25,11 @@ jobs:
         distribution: 'adopt'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
-
-# Input parameters can be found at https://github.com/marketplace/actions/checkstyle-for-java
-    - name: Check code style
-      uses: dbelyaev/action-checkstyle@master
-      env:
-          github_token: ${{ github.token }}
-      with:
-          checkstyle_config: google_style.xml
-          reporter: github-pr-review
-          level: warning
-          fail_on_error: true
-          
+    
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
+    #- name: Publish to GitHub Packages Apache Maven
+     # run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+     # env:
+     #   GITHUB_TOKEN: ${{ github.token }}
