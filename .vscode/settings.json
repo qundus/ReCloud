@@ -8,5 +8,6 @@
     ],
     "workbench.settings.editor": "json",
     "java.configuration.updateBuildConfiguration": "automatic",
-    "java.completion.guessMethodArguments": false
+    "java.completion.guessMethodArguments": false,
+    "java.checkstyle.configuration": "/google_checks.xml"
 }

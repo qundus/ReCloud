@@ -1,10 +1,9 @@
 package tech.cypherskar.cloudex.bridges;
 
-import tech.cypherskar.cloudex.templates.setups.ABrokerSetup;
-
 import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 
+import tech.cypherskar.cloudex.templates.setups.ABrokerSetup;
 /**
  * Bridges are disposable interfaces used within classes 
  * to control the instantiation  and/or update of a corrospondant 
@@ -27,8 +26,8 @@ public class ABrokerSetupBridge
     //  *****************************
     //  Fields
     //  *****************************
-    private ObjectArrayList<ABrokerSetup> brokerList;
     private ABrokerSetup brokerToUpdate;
+    private ObjectArrayList<ABrokerSetup> brokerList;
     
     
     //  *****************************
@@ -58,14 +57,16 @@ public class ABrokerSetupBridge
      */
     public void Create()
     {
-        if (brokerList == null) return;
+        if (brokerList == null) {
+          return;
+        }
 
-        boolean addBroker = 
-        this.brokerList.stream().noneMatch(b -> b.name.equals(this.brokerToUpdate.name));
+        boolean addBroker = this.brokerList.stream().noneMatch(b -> b.name.equals(this.brokerToUpdate.name));
 
-        if (addBroker)
-        {
-            if (this.brokerToUpdate.name == null) this.brokerToUpdate.name = "Broker";
+        if (addBroker) {
+          if (this.brokerToUpdate.name == null) {
+            this.brokerToUpdate.name = "Broker";
+          }
             //this.brokerToUpdate.clones = (clones <= 0)? 1 : clones;
             this.brokerToUpdate.taskIndeces = new IntArrayList();
             this.brokerToUpdate.vmIndeces = new IntArrayList();
