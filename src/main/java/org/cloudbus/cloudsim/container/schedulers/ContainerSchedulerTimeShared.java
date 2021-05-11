@@ -35,9 +35,6 @@ public class ContainerSchedulerTimeShared extends ContainerScheduler {
 
     @Override
     public boolean allocatePesForContainer(Container container, List<Double> mipsShareRequested) {
-        /**
-         * TODO: add the same to RAM and BW provisioners
-         */
 //        Log.printLine("ContainerSchedulerTimeShared: allocatePesForContainer with mips share size......" + mipsShareRequested.size());
 //        if (container.isInMigration()) {
 //            if (!getContainersMigratingIn().contains(container.getUid()) && !getContainersMigratingOut().contains(container.getUid())) {

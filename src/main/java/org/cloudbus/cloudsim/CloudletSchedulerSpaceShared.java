@@ -438,29 +438,25 @@ public class CloudletSchedulerSpaceShared extends CloudletScheduler {
 
 	@Override
 	public double getTotalCurrentAllocatedMipsForCloudlet(ResCloudlet rcl, double time) {   
-                //@todo the method isn't in fact implemented
-		// TODO Auto-generated method stub
+		//@todo the method isn't in fact implemented
 		return 0.0;
 	}
 
 	@Override
 	public double getTotalCurrentRequestedMipsForCloudlet(ResCloudlet rcl, double time) {
-                //@todo the method isn't in fact implemented
-		// TODO Auto-generated method stub
+		//@todo the method isn't in fact implemented
 		return 0.0;
 	}
 
 	@Override
 	public double getCurrentRequestedUtilizationOfRam() {
-                //@todo the method isn't in fact implemented
-		// TODO Auto-generated method stub
+		//@todo the method isn't in fact implemented
 		return 0;
 	}
 
 	@Override
 	public double getCurrentRequestedUtilizationOfBw() {
-                //@todo the method isn't in fact implemented
-		// TODO Auto-generated method stub
+		//@todo the method isn't in fact implemented
 		return 0;
 	}
 

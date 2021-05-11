@@ -21,7 +21,6 @@ public abstract class ContainerPeProvisioner {
 	 * @post $none
 	 */
 	public ContainerPeProvisioner(double mips) {
-		// TODO Auto-generated constructor stub
 		setMips(mips);
 		setAvailableMips(mips);
 	}

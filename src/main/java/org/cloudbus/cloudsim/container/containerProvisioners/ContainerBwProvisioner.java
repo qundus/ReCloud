@@ -33,7 +33,6 @@ public abstract class ContainerBwProvisioner {
      * @post $none
      */
     public ContainerBwProvisioner(long vmBw) {
-        // TODO Auto-generated constructor stub
         setVmBw(vmBw);
         setAvailableVmBw(vmBw);
     }

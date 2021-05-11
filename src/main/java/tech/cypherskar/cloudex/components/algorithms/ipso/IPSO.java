@@ -1,6 +1,5 @@
 package tech.cypherskar.cloudex.components.algorithms.ipso;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
@@ -35,7 +34,10 @@ public class IPSO extends StandardSim
 
     private List<? extends Cloudlet> tasks;
     private List<? extends Vm> vms;
+
+    @SuppressWarnings("unused")
     private int noOfBatches;
+
     protected int rangeStart;
     protected int rangeEnd;
 
@@ -252,6 +254,7 @@ public class IPSO extends StandardSim
         return result;
     }
 
+    /*
     private void RebalanceFinalSolution()
     {
         int noOfVms = this.vms.size();
@@ -325,6 +328,7 @@ public class IPSO extends StandardSim
         completionTimes.remove(heaviestVMIdx);
         }
     }
+    */
 
     // This function will re-balance the solution found by PSO for better solutions
     private void RebalanceFinalSolution(int[] result)

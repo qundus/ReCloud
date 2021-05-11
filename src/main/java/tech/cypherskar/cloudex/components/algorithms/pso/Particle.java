@@ -111,6 +111,9 @@ public class Particle
             case RIW_LDIW_3:
             this.fitnessList.add(newFitness);
             break;
+            
+            default:
+            break;
         } 
     }
 

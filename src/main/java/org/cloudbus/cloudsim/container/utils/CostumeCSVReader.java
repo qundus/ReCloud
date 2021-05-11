@@ -15,7 +15,6 @@ public class CostumeCSVReader {
 	private static List<String[]> fileData;
 
 	public CostumeCSVReader(File inputFile) {
-		// TODO Auto-generated method stub
 		CSVReader reader = null;
 		try 
 		{

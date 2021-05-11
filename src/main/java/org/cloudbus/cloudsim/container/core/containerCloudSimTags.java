@@ -40,7 +40,6 @@ public class containerCloudSimTags {
 
 
     private containerCloudSimTags() {
-        // TODO Auto-generated constructor stub
         /** Private Constructor */
         throw new UnsupportedOperationException("ContainerCloudSim Tags cannot be instantiated");
 

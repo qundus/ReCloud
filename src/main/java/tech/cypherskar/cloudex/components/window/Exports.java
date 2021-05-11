@@ -1,6 +1,5 @@
 package tech.cypherskar.cloudex.components.window;
 
-import java.awt.BorderLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.nio.file.Files;
@@ -15,7 +14,6 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import tech.cypherskar.cloudex.components.cloudsim.ASimulation;
@@ -57,9 +55,8 @@ public class Exports
         
         result.addMouseListener(new MouseListener(){
             @Override
-            public void mouseClicked(MouseEvent arg0) {
-                // TODO Auto-generated method stub
-
+            public void mouseClicked(MouseEvent arg0) 
+            {
                 Exports exports = new Exports();
                 String resultsFolder = exports.GetInitialFolderPath(Simulations.GetList());
                 String path = null;
@@ -98,28 +95,16 @@ public class Exports
             }
 
             @Override
-            public void mouseEntered(MouseEvent arg0) {
-                // TODO Auto-generated method stub
-                
-            }
+            public void mouseEntered(MouseEvent arg0) {}
 
             @Override
-            public void mouseExited(MouseEvent arg0) {
-                // TODO Auto-generated method stub
-                
-            }
+            public void mouseExited(MouseEvent arg0) {}
 
             @Override
-            public void mousePressed(MouseEvent arg0) {
-                // TODO Auto-generated method stub
-                
-            }
+            public void mousePressed(MouseEvent arg0) {}
 
             @Override
-            public void mouseReleased(MouseEvent arg0) {
-                // TODO Auto-generated method stub
-                
-            }
+            public void mouseReleased(MouseEvent arg0) {}
         });
 
         return result;

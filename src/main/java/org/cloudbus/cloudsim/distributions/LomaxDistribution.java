@@ -18,7 +18,7 @@ import java.util.Random;
  * @author Marcos Dias de Assuncao
  * @since CloudSim Toolkit 1.0
  */
-public class LomaxDistribution extends ParetoDistr implements ContinuousDistribution {
+public class LomaxDistribution extends ParetoDistr {
 
 	/** The shift. */
 	private final double shift;

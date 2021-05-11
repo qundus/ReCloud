@@ -313,6 +313,7 @@ public class ContainerDatacenterBroker extends SimEntity {
             sendNow(datacenterId, CloudSimTags.RESOURCE_CHARACTERISTICS, getId());
         }
     }
+    @SuppressWarnings("unchecked")
     protected void processNewVmCreate(SimEvent ev) {
         Map<String, Object> map = (Map<String, Object>) ev.getData();
         int datacenterId = (int) map.get("datacenterID");
@@ -901,6 +902,7 @@ public class ContainerDatacenterBroker extends SimEntity {
 
 //------------------------------------------------
 
+    @SuppressWarnings("unchecked")
     public <T extends Container> List<T> getContainerList() {
 
         return (List<T>) containerList;
@@ -930,6 +932,7 @@ public class ContainerDatacenterBroker extends SimEntity {
         this.containersToDatacentersMap = containersToDatacentersMap;
     }
 
+    @SuppressWarnings("unchecked")
     public <T extends Container> List<T> getContainersCreatedList() {
         return (List<T>) containersCreatedList;
     }

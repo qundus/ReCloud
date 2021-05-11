@@ -12,7 +12,6 @@ public class Correlation {
     }
 
     public double getCor(double[] xs1, double[] ys1) {
-        //TODO: check here that arrays are not null, of the same length etc
         double[] xs;
         double[] ys;
         if (xs1.length > ys1.length) {

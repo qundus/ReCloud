@@ -25,7 +25,6 @@ public abstract class ContainerVmPeProvisioner {
      * @post $none
      */
     public ContainerVmPeProvisioner(double mips) {
-        // TODO Auto-generated constructor stub
         setMips(mips);
         setAvailableMips(mips);
     }

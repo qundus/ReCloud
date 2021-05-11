@@ -1,6 +1,5 @@
 package org.cloudbus.cloudsim.container.containerSelectionPolicies;
 
-import org.cloudbus.cloudsim.container.containerSelectionPolicies.PowerContainerSelectionPolicy;
 import org.cloudbus.cloudsim.container.core.Container;
 import org.cloudbus.cloudsim.container.core.PowerContainer;
 import org.cloudbus.cloudsim.container.core.PowerContainerHost;

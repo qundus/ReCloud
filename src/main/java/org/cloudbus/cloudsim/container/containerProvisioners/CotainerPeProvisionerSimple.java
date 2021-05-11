@@ -39,8 +39,6 @@ public class CotainerPeProvisionerSimple extends ContainerPeProvisioner {
      */
     @Override
     public boolean allocateMipsForContainer(Container container, double mips) {
-        // TODO Auto-generated method stub
-
         return allocateMipsForContainer(container.getUid(), mips);
     }
 

@@ -230,6 +230,7 @@ public class PowerContainerDatacenterCM extends PowerContainerDatacenter {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     protected void processVmCreate(SimEvent ev, boolean ack) {
 
 //    here we override the method
