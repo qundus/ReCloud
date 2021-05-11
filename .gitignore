@@ -1,0 +1,4 @@
+distribution/generated-sources
+distribution/maven-archiver
+distribution/maven-status
+distribution/target
