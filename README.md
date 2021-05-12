@@ -5,7 +5,7 @@
 <p align="center">
     <a href="https://github.com/cypherskar/CloudEx" alt="Downloads">
         <img alt="Repo Downloads" src="https://img.shields.io/github/downloads/cypherskar/CloudEx/total"></a>
-    <a href="https://github.com/marketplace/actions/super-linter" alt="Code Base Lint">
+    <a href="https://github.com/marketplace/actions/super-linter" alt="Code Base Linter">
         <img alt="Code Base Lint" src="https://github.com/cypherskar/CloudEx/workflows/Lint%20Code%20Base/badge.svg"></a>
 </p>
 
