@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Code Base Linter/Formatter
+name: Code Base Formatter
 
 # Controls when the action will run. 
 on:
@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build-job:
+  formatting-java-files:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     permissions:
@@ -26,15 +26,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Clone Repository
+      - name: __Clone Repository
         uses: actions/checkout@v2
         with:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
       
-      - name: Lint Code Base
-        uses: github/super-linter@v3
-        env:
-          #VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #https://github.com/axel-op/googlejavaformat-action
+      - name: __Format Code Base
+        uses: axel-op/googlejavaformat-action@v3
+        with:
+          args: "--replace"
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
