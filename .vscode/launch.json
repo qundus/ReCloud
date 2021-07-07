@@ -1,0 +1,19 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug ReCloud",
+      "request": "launch",
+      "mainClass": "tech.skargen.recloud.Example",
+      "projectName": "ReCloud",
+      "console": "integratedTerminal"
+      // "vmArgs": "-Djmh.ignoreLock=true"
+      // "vmArgs": "-XX:+UnlockCommercialFeatures -XX:+FlightRecorder -XX:StartFlightRecording=duration=200s,filename=recloudExample.jfr",
+      // "args": "-XX:+UnlockCommercialFeatures -XX:+FlightRecorder -cp ./out/ tech.skargen.recloud.Main"
+    }
+  ]
+}
