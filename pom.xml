@@ -2,18 +2,18 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 
-  <groupId>tech.cypherskar.cloudex</groupId>
-  <artifactId>CloudEx</artifactId>
-  <version>0.9.5-SNAPSHOT</version>
+  <groupId>tech.skargen.recloud</groupId>
+  <artifactId>ReCloud</artifactId>
+  <version>0.5-SNAPSHOT</version>
   <modelVersion>4.0.0</modelVersion>
-  <name>Cloud Eperiments Package</name>
+  <name>Researchers Cloud Package</name>
   <packaging>jar</packaging>
 
   <distributionManagement>
     <repository>
       <id>github</id>
       <name>GitHub cypherskar Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/cypherskar/CloudEx</url>
+      <url>https://maven.pkg.github.com/cypherskar/ReCloud</url>
     </repository>
   </distributionManagement>
 
@@ -22,9 +22,51 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
+    <maven-compiler-plugin-version>2.3.2</maven-compiler-plugin-version>
   </properties>
 
   <dependencies>
+
+    <dependency>
+      <groupId>org.openjdk.jmh</groupId>
+      <artifactId>jmh-generator-annprocess</artifactId>
+      <version>1.32</version>
+      <!-- 
+      the processor artifact is required only during compilation and 
+      does not need to be transitive, hence provided scope
+      -->
+      <scope>provided</scope> 
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.openjdk.jmh</groupId>
+      <artifactId>jmh-core</artifactId>
+      <version>1.32</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.14.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.14.1</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>com.cloudbus.cloudsim</groupId>
+      <artifactId>cloudsim-package</artifactId>
+      <version>4.0</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/cloudsim-4.0.jar</systemPath>
+    </dependency>
+
     <dependency>
       <groupId>it.unimi.dsi</groupId>
       <artifactId>fastutil</artifactId>
@@ -62,14 +104,13 @@
     <scriptSourceDirectory>${project.basedir}/src/main/scripts</scriptSourceDirectory>
     <testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
 
-    <directory>${project.basedir}/distribution</directory>
-    <finalName>CloudEx_${project.version}</finalName>
+    <!-- <directory>${project.basedir}/distribution</directory>
+    <finalName>ReCloudv${project.version}</finalName>
     <outputDirectory>${project.basedir}/distribution/target/classes</outputDirectory>
-    <testOutputDirectory>${project.basedir}/distribution/target/test-classes</testOutputDirectory>
+    <testOutputDirectory>${project.basedir}/distribution/target/test-classes</testOutputDirectory> -->
 
     <pluginManagement>
       <plugins>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-plugin-plugin</artifactId>
@@ -102,7 +143,29 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>3.0.0-M1</version>
       </plugin>
+
+      <!-- <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>1.2.1</version>
+          <executions>
+              <execution>
+                  <phase>package</phase>
+                  <goals>
+                          <goal>shade</goal>
+                  </goals>
+                      <configuration>
+                          <transformers>
+                              <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                  <mainClass>tech.skargen.recloud.Example</mainClass>
+                              </transformer>
+                          </transformers>
+                      </configuration>
+              </execution>
+          </executions>
+      </plugin> -->
     </plugins>
+
 
   </build>
 
@@ -129,3 +192,5 @@
   <!-- ===================================== -->
 
 </project>
+
+<!-- clang format https://zed0.co.uk/clang-format-configurator/ -->
