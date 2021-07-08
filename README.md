@@ -73,7 +73,7 @@ ReCloud.launch(recloud);
 ```
 The above code launches a gui menu that yields the following outcomes:
 <p float="left">
-  <img style="float: right;" width="100" src="etc/example1_table.png">
+  <img style="float: right;" width="100" src="https://raw.githubusercontent.com/cypherskar/ReCloud/main/etc/example1_table.png">
   <img style="float: right;" width="100" src="etc/example1_table.png">
   <img style="float: right;" width="100" src="etc/example1_table.png">
 </p>
