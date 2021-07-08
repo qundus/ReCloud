@@ -43,10 +43,6 @@ _Help me expand base of implemented cloud algorithms_
 
 ## Simplest example
 Create a `ReCloud` instance to start configuring experiment fields, then launch instance through `Recloud.launch()`:
-<p>
-  <p align="left">
-  </p>
-</p>
 ```java
 // Create a ReCloud instance.
 ReCloud recloud = new ReCloud();
