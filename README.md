@@ -59,22 +59,77 @@ recloud.jobs().newBroker().make();
 // Create a virtual machine.
 recloud.jobs().newVm().make();
 
-// Create a cloudlets (Task).
+// Create a cloudlet (Task).
 recloud.jobs().newTask().make();
 
 // Add wanted simulations to experiment.
 recloud.experiment().newSimulations(new CloudsimSimulation());
 
 // Add goal for number of cloudlets created.
-recloud.experiment().taskTargets(100, 200);
+recloud.experiment().taskTargets(100);
 
 // Launch.
 ReCloud.launch(recloud);
 ```
-The above code launches a gui menu that yields the following outcomes:
-<p float="left">
-  <img style="float: right;" width="100" src="https://raw.githubusercontent.com/cypherskar/ReCloud/main/etc/example1_table.png">
-  <img style="float: right;" width="100" src="etc/example1_table.png">
-  <img style="float: right;" width="100" src="etc/example1_table.png">
-</p>
+<img style="float: right;" height="500" width="100%" src="https://raw.githubusercontent.com/cypherskar/ReCloud/main/etc/example1.gif">
+
+## Intermediate example
+Configure each cloud entity separatly and run multiple scheduling algorithms with the same setup environment:
+```java
+// Create a ReCloud instance.
+ReCloud recloud = new ReCloud();
+
+// Create and configure datacenters/server.
+recloud.servers().newServer().name("Server").environment("x86", "Linux", "Xen").timeZone(10.0).secCost(3.0)
+       .memCost(0.05).storageCost(0.001).bwCost(0.0).intervals(0).clones(1).make();
+
+// Create and configure host.
+recloud.servers()
+    .newHost()
+    .on("Server")
+    .mips(177730)
+    .pes(6)
+    .ram(16000)
+    .bw(15000)
+    .storage(4000000)
+    .clones(2)
+    .make();
+
+// Create and configure broker.
+recloud.jobs().newBroker().name("koala").make();
+
+// Create and configure virtual machine.
+recloud.jobs()
+    .newVm()
+    .mips(9726)
+    .pes(1)
+    .ram2(9)
+    .bw(1000)
+    .image(10000)
+    .vmm("Xen")
+    .clones(5)
+    .make();
+
+// Create and configure a cloudlet (Task).
+recloud.jobs()
+    .newTask()
+    .randomStyle(RandomStyle.Fixed_Pace)
+    .length(10000, 20000)
+    .pes(1)
+    .filesize(1)
+    .outpusize(1)
+    .make();
+
+// Add wanted simulations to experiment.
+recloud.experiment().newSimulations(new CloudsimSimulation(), new Bullet_CS(GunType.Magnum),
+    new SJF_CS(), new HoneyBee_CS(0.1));
+
+// Add goal for number of cloudlets created.
+recloud.experiment().taskTargets(100);
+
+// Launch.
+ReCloud.launch(recloud);
+```
+
+![example2](https://user-images.githubusercontent.com/72963129/124987394-7f6ac100-e045-11eb-83a1-4d2e7fc0bb70.gif)
 
