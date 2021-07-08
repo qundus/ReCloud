@@ -1,2 +1,5 @@
-etc/
+# Generated
 target/
+javadoc/
+bin/
+log/
