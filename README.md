@@ -10,7 +10,7 @@ markdown ref style      | https://markdownguide.org/basic-syntax/#reference-styl
 [contributors-shield]: https://img.shields.io/github/contributors/cypherskar/ReCLoud?style=flat-square
 [contributors-url]: https://github.com/cypherskar/ReCloud/graphs/contributors
 [downloads-shield]: https://img.shields.io/github/downloads/cypherskar/ReCloud/total?style=flat-square
-[vulnerabilities-shield]: https://img.shields.io/snyk/vulnerabilities/github/cypherskar/ReCloud?style=flat-square
+[vulnerabilities-shield]: https://img.shields.io/snyk/vulnerabilities/github/cypherskar/recloud?style=flat-square
 [code-grade]: https://www.code-inspector.com/project/24753/status/svg
 [code-quality]: https://www.code-inspector.com/project/24753/score/svg
 <!-- references -->
@@ -19,11 +19,11 @@ markdown ref style      | https://markdownguide.org/basic-syntax/#reference-styl
 
 <!-- entry -->
 # Researchers Cloud 
-![code grade][code-grade]
-![code quality][code-quality]
-![Vulnerabilities][vulnerabilities-shield]
-![Downloads][downloads-shield]
-[![Contributors][contributors-shield]][contributors-url]
+![code-grade]
+![code-quality]
+![vulnerabilities-shield]
+![downloads-shield]
+[![contributors-shield]][contributors-url]
 
 <!-- description -->
 A simulation library based on [Cloudsim] that aims to offer many methods to automate replication of various simulation scenarios.
