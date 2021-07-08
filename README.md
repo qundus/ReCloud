@@ -115,20 +115,21 @@ ReCloud.launch(recloud);
 
 ## Custom example
 The difficulty of more complex examples rise with the experiment parameters, 
-say we need the following setup
-> - 1 server named `server 1` with 2 hosts named `host 1` & `host 2` repsectivley.
-> - 1 server named `server 2` with 2 hosts, `host 1` from `server 1` & `host 3`
-> - 2 brokers named `broker 1` & `broker 2`.
-> - 2 virtual machines on `broker 1` named `vm 1` and `vm 2`.
-> - 1 virtual machine on `broker 2` named `vm 2`.
-> - 1 fixed task-type* cloudlets.
-> - 1 random task-type* cloudlets.
+say we need the following setup:
+> [01] 2 servers          | `server_1` & `server_2`. <br/>
+> [02] 2 hosts            | `host_1` on `server_1` & `server_2` | `host_2` on `server_1`. <br/>
+> [03] 1 host             | `host_3` on `server_2`.<br/>
+> [04] 2 brokers          | `koala 1` & `koala 2`.<br/>
+> [05] 2 virtual machines | `vm_1` on `koala_1` | `vm_2` on `koala_1` & `koala_2` with `3` identical clones.<br/>
+> [06] 1 virtual machine  | `vm_3` on `koala_2` .<br/>
+> [07] 1 fixed task-type* cloudlets.<br/>
+> [08] 1 random task-type* cloudlets on `koala_2`.<br/>
 > 
 > task-types*: are cloudlets templates that will generate cloudsim cloudlets/tasks in runtime according to their setup.
 > 
 And with this setup we need to configure the experiment as following:
-> - Create cloudlets and ditribute them over brokers `randomly`.
-> - Test `CloudsimSimulation`, `Honey Bee and Particle` and `Swarm Optimization algorithms`.
-> - Experiment with `100, 200, 300` tasks.
+> [09] Create cloudlets and ditribute them over brokers `randomly`.
+> [10] Test `CloudsimSimulation`, `Bullet_Magnum` and `Particle Swarm Optimization algorithms`.
+> [11] Experiment with `100, 200, 300` tasks.
 
 
