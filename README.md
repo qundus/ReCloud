@@ -71,7 +71,7 @@ recloud.experiment().taskTargets(100);
 // Launch.
 ReCloud.launch(recloud);
 ```
-<img style="float: right;" height="500" width="100%" src="https://raw.githubusercontent.com/cypherskar/ReCloud/main/etc/example1.gif">
+<img style="float: right;" height="500" width="100%" src="https://user-images.githubusercontent.com/72963129/124991815-d1faac00-e04a-11eb-9273-094d708f80b3.gif">
 
 ## Intermediate example
 Configure each cloud entity separatly and run multiple scheduling algorithms with the same setup environment:
@@ -80,49 +80,30 @@ Configure each cloud entity separatly and run multiple scheduling algorithms wit
 ReCloud recloud = new ReCloud();
 
 // Create and configure datacenters/server.
-recloud.servers().newServer().name("Server").environment("x86", "Linux", "Xen").timeZone(10.0).secCost(3.0)
-       .memCost(0.05).storageCost(0.001).bwCost(0.0).intervals(0).clones(1).make();
+recloud.servers().newServer().name("Server").environment("x86", "Linux", "Xen").timeZone(10.0)
+.secCost(3.0).memCost(0.05).storageCost(0.001).bwCost(0.0).intervals(0).clones(1).make();
 
 // Create and configure host.
-recloud.servers()
-    .newHost()
-    .on("Server")
-    .mips(177730)
-    .pes(6)
-    .ram(16000)
-    .bw(15000)
-    .storage(4000000)
-    .clones(2)
-    .make();
+recloud.servers().newHost().on("Server").mips(177730).pes(6).ram(16000).bw(15000)
+.storage(4000000).clones(2).make();
 
 // Create and configure broker.
 recloud.jobs().newBroker().name("koala").make();
 
 // Create and configure virtual machine.
-recloud.jobs()
-    .newVm()
-    .mips(9726)
-    .pes(1)
-    .ram2(9)
-    .bw(1000)
-    .image(10000)
-    .vmm("Xen")
-    .clones(5)
-    .make();
+recloud.jobs().newVm().mips(9726).pes(1).ram2(9).bw(1000).image(10000).vmm("Xen").clones(5).make();
 
 // Create and configure a cloudlet (Task).
-recloud.jobs()
-    .newTask()
-    .randomStyle(RandomStyle.Fixed_Pace)
-    .length(10000, 20000)
-    .pes(1)
-    .filesize(1)
-    .outpusize(1)
-    .make();
+recloud.jobs().newTask().randomStyle(RandomStyle.Fixed_Pace).length(10000, 20000).pes(1)
+.filesize(1).outpusize(1).make();
 
 // Add wanted simulations to experiment.
-recloud.experiment().newSimulations(new CloudsimSimulation(), new Bullet_CS(GunType.Magnum),
-    new SJF_CS(), new HoneyBee_CS(0.1));
+recloud.experiment().newSimulations(
+ new CloudsimSimulation(), 
+ new Bullet_CS(GunType.Magnum),
+ new SJF_CS(), 
+ new HoneyBee_CS(0.1)
+);
 
 // Add goal for number of cloudlets created.
 recloud.experiment().taskTargets(100);
@@ -130,6 +111,24 @@ recloud.experiment().taskTargets(100);
 // Launch.
 ReCloud.launch(recloud);
 ```
+<img style="float: right;" height="500" width="100%" src="https://user-images.githubusercontent.com/72963129/124992936-526ddc80-e04c-11eb-8c3a-0cd15a8f1c86.gif">
 
-![example2](https://user-images.githubusercontent.com/72963129/124987394-7f6ac100-e045-11eb-83a1-4d2e7fc0bb70.gif)
+## Custom example
+The difficulty of more complex examples rise with the experiment parameters, 
+say we need the following setup
+> - 1 server named `server 1` with 2 hosts named `host 1` & `host 2` repsectivley.
+> - 1 server named `server 2` with 2 hosts, `host 1` from `server 1` & `host 3`
+> - 2 brokers named `broker 1` & `broker 2`.
+> - 2 virtual machines on `broker 1` named `vm 1` and `vm 2`.
+> - 1 virtual machine on `broker 2` named `vm 2`.
+> - 1 fixed task-type* cloudlets.
+> - 1 random task-type* cloudlets.
+> 
+> task-types*: are cloudlets templates that will generate cloudsim cloudlets/tasks in runtime according to their setup.
+> 
+And with this setup we need to configure the experiment as following:
+> - Create cloudlets and ditribute them over brokers `randomly`.
+> - Test `CloudsimSimulation`, `Honey Bee and Particle` and `Swarm Optimization algorithms`.
+> - Experiment with `100, 200, 300` tasks.
+
 
