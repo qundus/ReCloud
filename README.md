@@ -28,7 +28,7 @@ markdown ref style      | https://markdownguide.org/basic-syntax/#reference-styl
 <!-- description -->
 A simulation library based on [Cloudsim] that aims to offer many methods to automate replication of various simulation scenarios.
 
-### Why? what's wrong with using Cloudsim directly?
+### Why not use Cloudsim directly?
 > I faced alot of difficulties during my masters studies and alot of time was consumed by the process of re-implementating the research papers' algorithm/s instead of focusing on the actual improvments that could be done on any algorithm. Therefore, i created this tool to help me replicate all of those various experimentation scenarios with few lines of code as possible and as scalable and flexible as i can make them.
 
 ### Features Include:
@@ -41,4 +41,38 @@ A simulation library based on [Cloudsim] that aims to offer many methods to auto
 
 _Help me expand base of implemented cloud algorithms_
 
-## Simple example _TO BE CONTINUED_
+## Simplest example
+Create a `ReCloud` instance to start configuring experiment fields, then launch instance through `Recloud.launch()`:
+<p>
+  <p align="left">
+  </p>
+</p>
+```java
+// Create a ReCloud instance.
+ReCloud recloud = new ReCloud();
+
+// Create a datacenters/server.
+recloud.servers().newServer().make();
+
+// Create a host.
+recloud.servers().newHost().make();
+
+// Create a broker.
+recloud.jobs().newBroker().make();
+
+// Create a virtual machine.
+recloud.jobs().newVm().make();
+
+// Create a cloudlets (Task).
+recloud.jobs().newTask().make();
+
+// Add wanted simulations to experiment.
+recloud.experiment().newSimulations(new CloudsimSimulation());
+
+// Add goal for number of cloudlets created.
+recloud.experiment().taskTargets(100, 200);
+
+// Launch.
+ReCloud.launch(recloud);
+```
+The above code launches a gui menu that yields the following outcomes:
