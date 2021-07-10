@@ -3,3 +3,4 @@ target/
 javadoc/ 
 bin/ 
 log/ 
+.apt_*/
