@@ -64,7 +64,7 @@
       <artifactId>cloudsim-package</artifactId>
       <version>4.0</version>
       <scope>system</scope>
-      <systemPath>${basedir}/lib/cloudsim-4.0.jar</systemPath>
+      <systemPath>${basedir}/lib/cloudsim-4.0-SNAPSHOT.jar</systemPath>
     </dependency>
 
     <dependency>
@@ -100,14 +100,14 @@
   </dependencies>
 
   <build>
+     <finalName>${artifactId}-${project.version}</finalName>
+
+    <directory>${user.dir}-release/${artifactId}</directory>
+    <outputDirectory>${project.build.directory}/classes</outputDirectory>
+    <testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
     <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
     <scriptSourceDirectory>${project.basedir}/src/main/scripts</scriptSourceDirectory>
     <testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
-
-    <!-- <directory>${project.basedir}/distribution</directory>
-    <finalName>ReCloudv${project.version}</finalName>
-    <outputDirectory>${project.basedir}/distribution/target/classes</outputDirectory>
-    <testOutputDirectory>${project.basedir}/distribution/target/test-classes</testOutputDirectory> -->
 
     <pluginManagement>
       <plugins>
@@ -144,26 +144,25 @@
         <version>3.0.0-M1</version>
       </plugin>
 
-      <!-- <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-shade-plugin</artifactId>
-          <version>1.2.1</version>
-          <executions>
-              <execution>
-                  <phase>package</phase>
-                  <goals>
-                          <goal>shade</goal>
-                  </goals>
-                      <configuration>
-                          <transformers>
-                              <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                  <mainClass>tech.skargen.recloud.Example</mainClass>
-                              </transformer>
-                          </transformers>
-                      </configuration>
-              </execution>
-          </executions>
-      </plugin> -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+        <execution>
+            <phase>generate-sources</phase>
+            <goals>
+                <goal>add-source</goal>
+            </goals>
+            <configuration>
+                <sources>
+                    <source>src/main/tech/skargen/skartools</source>
+                </sources>
+            </configuration>
+        </execution>
+        </executions>
+      </plugin>
+
     </plugins>
 
 
