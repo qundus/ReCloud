@@ -9,5 +9,11 @@
     "workbench.settings.editor": "json",
     "java.configuration.updateBuildConfiguration": "automatic",
     "java.completion.guessMethodArguments": false,
-    "java.checkstyle.configuration": "/google_checks.xml"
+    "java.checkstyle.configuration": "/google_checks.xml",
+    "files.watcherExclude": {
+	    "**/.git/objects/**": true,
+	    "**/.git/subtree-cache/**": true,
+	    "**/node_modules/*/**": true
+ 	 }
+
 }

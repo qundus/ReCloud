@@ -100,11 +100,13 @@
   </dependencies>
 
   <build>
-     <finalName>${artifactId}-${project.version}</finalName>
+    <directory>target</directory>
+    
+    <finalName>${project.artifactId}-${project.version}</finalName>
 
-    <directory>${user.dir}-release/${artifactId}</directory>
     <outputDirectory>${project.build.directory}/classes</outputDirectory>
     <testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+    
     <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
     <scriptSourceDirectory>${project.basedir}/src/main/scripts</scriptSourceDirectory>
     <testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
